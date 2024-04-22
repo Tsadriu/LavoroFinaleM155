@@ -396,3 +396,12 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/obj/Debug/net8.0-windows/refint/LavoroFinaleM155.dll
+/obj/Debug/net8.0-windows/apphost.exe
+/obj/Debug/net8.0-windows/LavoroFinaleM155.AssemblyInfo.cs
+/obj/Debug/net8.0-windows/LavoroFinaleM155.AssemblyInfoInputs.cache
+/obj/Debug/net8.0-windows/LavoroFinaleM155.csproj.GenerateResource.cache
+/obj/Debug/net8.0-windows/LavoroFinaleM155.dll
+/obj/Debug/net8.0-windows/LavoroFinaleM155.pdb
+/obj/Debug/net8.0-windows/LavoroFinaleM155.sourcelink.json
+/obj/Debug/net8.0-windows/ref/LavoroFinaleM155.dll
