@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LavoroFinaleM155")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8773380a4a1cb0a1a939b93f34a44757f53bb394")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58da6b51265fbeefbbc439bdc1d1fc2d51025196")]
 [assembly: System.Reflection.AssemblyProductAttribute("LavoroFinaleM155")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LavoroFinaleM155")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
