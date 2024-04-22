@@ -196,6 +196,7 @@
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
+            MaximizeBox = false;
             Name = "Form1";
             Text = "Verifica Finale M155 - Fabio Oliveira de Sousa";
             groupBox1.ResumeLayout(false);
