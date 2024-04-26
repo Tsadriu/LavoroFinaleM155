@@ -9,7 +9,6 @@ namespace LavoroFinaleM155
         public Form1()
         {
             InitializeComponent();
-            portNotFoundLabel.Text = string.Empty;
             StartPosition = FormStartPosition.CenterScreen;
         }
 
