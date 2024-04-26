@@ -1,3 +1,5 @@
+using System.IO.Ports;
+
 namespace LavoroFinaleM155
 {
     internal static class Program

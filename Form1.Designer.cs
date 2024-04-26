@@ -42,17 +42,26 @@
             ledStateCheckBox = new CheckBox();
             button1 = new Button();
             groupBox3 = new GroupBox();
+            groupBox4 = new GroupBox();
+            portNotFoundLabel = new Label();
+            applyBoardConfigButton = new Button();
+            baudNumericUpDown = new NumericUpDown();
+            label5 = new Label();
+            portBox = new TextBox();
+            label4 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ledTrackBar).BeginInit();
             groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)baudNumericUpDown).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(ledLabel);
             groupBox1.Controls.Add(ledComboBox);
-            groupBox1.Location = new Point(12, 27);
+            groupBox1.Location = new Point(12, 202);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(260, 58);
             groupBox1.TabIndex = 0;
@@ -87,7 +96,7 @@
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(ledTrackBar);
             groupBox2.Controls.Add(ledStateCheckBox);
-            groupBox2.Location = new Point(12, 104);
+            groupBox2.Location = new Point(12, 279);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(260, 184);
             groupBox2.TabIndex = 1;
@@ -181,18 +190,88 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(button1);
-            groupBox3.Location = new Point(12, 294);
+            groupBox3.Location = new Point(12, 469);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(260, 61);
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
             groupBox3.Text = "General";
             // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(portNotFoundLabel);
+            groupBox4.Controls.Add(applyBoardConfigButton);
+            groupBox4.Controls.Add(baudNumericUpDown);
+            groupBox4.Controls.Add(label5);
+            groupBox4.Controls.Add(portBox);
+            groupBox4.Controls.Add(label4);
+            groupBox4.Location = new Point(12, 21);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(260, 164);
+            groupBox4.TabIndex = 4;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Board configuration";
+            // 
+            // portNotFoundLabel
+            // 
+            portNotFoundLabel.AutoSize = true;
+            portNotFoundLabel.ForeColor = Color.Red;
+            portNotFoundLabel.Location = new Point(12, 139);
+            portNotFoundLabel.Name = "portNotFoundLabel";
+            portNotFoundLabel.Size = new Size(166, 15);
+            portNotFoundLabel.TabIndex = 5;
+            portNotFoundLabel.Text = "Port 'COM3' cannot be found!";
+            // 
+            // applyBoardConfigButton
+            // 
+            applyBoardConfigButton.Location = new Point(6, 107);
+            applyBoardConfigButton.Name = "applyBoardConfigButton";
+            applyBoardConfigButton.Size = new Size(125, 23);
+            applyBoardConfigButton.TabIndex = 4;
+            applyBoardConfigButton.Text = "Apply board config";
+            applyBoardConfigButton.UseVisualStyleBackColor = true;
+            applyBoardConfigButton.Click += applyBoardConfigButton_Click;
+            // 
+            // baudNumericUpDown
+            // 
+            baudNumericUpDown.InterceptArrowKeys = false;
+            baudNumericUpDown.Location = new Point(42, 69);
+            baudNumericUpDown.Maximum = new decimal(new int[] { 99999, 0, 0, 0 });
+            baudNumericUpDown.Name = "baudNumericUpDown";
+            baudNumericUpDown.Size = new Size(183, 23);
+            baudNumericUpDown.TabIndex = 3;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 72);
+            label5.Name = "label5";
+            label5.Size = new Size(37, 15);
+            label5.TabIndex = 2;
+            label5.Text = "Baud:";
+            // 
+            // portBox
+            // 
+            portBox.Location = new Point(42, 22);
+            portBox.Name = "portBox";
+            portBox.Size = new Size(183, 23);
+            portBox.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 28);
+            label4.Name = "label4";
+            label4.Size = new Size(32, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Port:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 370);
+            ClientSize = new Size(283, 551);
+            Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -205,6 +284,9 @@
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ledTrackBar).EndInit();
             groupBox3.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)baudNumericUpDown).EndInit();
             ResumeLayout(false);
         }
 
@@ -224,5 +306,12 @@
         private Button button3;
         private Button button1;
         private GroupBox groupBox3;
+        private GroupBox groupBox4;
+        private NumericUpDown baudNumericUpDown;
+        private Label label5;
+        private TextBox portBox;
+        private Label label4;
+        private Button applyBoardConfigButton;
+        private Label portNotFoundLabel;
     }
 }
