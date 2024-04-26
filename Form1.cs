@@ -10,9 +10,10 @@ namespace LavoroFinaleM155
         {
             InitializeComponent();
             portNotFoundLabel.Text = string.Empty;
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void trackBar1_Scroll(object sender, EventArgs e)
+        private void LedTrackBarOnChanged(object sender, EventArgs e)
         {
             if (ledTrackBar.Value > 0)
             {
@@ -23,13 +24,25 @@ namespace LavoroFinaleM155
             ledValueLabel.Text = "0%";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void SendCommandButtonOnClick(object sender, EventArgs e)
         {
-            if (ledComboBox.SelectedIndex == -1)
+            if (!_serialPort.IsOpen)
             {
+                MessageBox.Show("Please make sure your board is configured correctly, and connected to this device and try again.", "Could not connect to Arduino!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
+            if (ledComboBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a valid LED first.", "No led selected!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+        }
+        private void ApplyBoardConfigButtonOnClick(object sender, EventArgs e)
+        {
+            SetupSerialPort();
         }
 
         private void SetupSerialPort()
@@ -48,19 +61,12 @@ namespace LavoroFinaleM155
                 }
 
                 _serialPort.Open();
-                portNotFoundLabel.Text = $"Comunicating with port '{_serialPort.PortName}' - Baud {_serialPort.BaudRate}";
-                portNotFoundLabel.ForeColor = Color.Green;
+                MessageBox.Show($"Successfully communicating with port '{_serialPort.PortName}' - Baud {_serialPort.BaudRate}", "Connection successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                portNotFoundLabel.Text = $"Port '{_serialPort.PortName}' - Baud {_serialPort.BaudRate} not found!";
-                portNotFoundLabel.ForeColor = Color.Red;
+                MessageBox.Show($"Could not connect to port '{_serialPort.PortName}' - Baud {_serialPort.BaudRate}", "Connection unsuccessful", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void applyBoardConfigButton_Click(object sender, EventArgs e)
-        {
-            SetupSerialPort();
         }
     }
 }

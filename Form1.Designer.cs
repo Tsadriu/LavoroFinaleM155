@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             groupBox1 = new GroupBox();
             ledLabel = new Label();
             ledComboBox = new ComboBox();
             groupBox2 = new GroupBox();
-            button2 = new Button();
+            sendCommandButton = new Button();
             button3 = new Button();
             label3 = new Label();
             ledValueLabel = new Label();
@@ -43,12 +44,12 @@
             button1 = new Button();
             groupBox3 = new GroupBox();
             groupBox4 = new GroupBox();
-            portNotFoundLabel = new Label();
             applyBoardConfigButton = new Button();
             baudNumericUpDown = new NumericUpDown();
             label5 = new Label();
             portBox = new TextBox();
             label4 = new Label();
+            notifyIcon1 = new NotifyIcon(components);
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ledTrackBar).BeginInit();
@@ -88,7 +89,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button2);
+            groupBox2.Controls.Add(sendCommandButton);
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(ledValueLabel);
@@ -103,15 +104,15 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Led properties";
             // 
-            // button2
+            // sendCommandButton
             // 
-            button2.Location = new Point(141, 145);
-            button2.Name = "button2";
-            button2.Size = new Size(111, 23);
-            button2.TabIndex = 3;
-            button2.Text = "Send command";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            sendCommandButton.Location = new Point(141, 145);
+            sendCommandButton.Name = "sendCommandButton";
+            sendCommandButton.Size = new Size(111, 23);
+            sendCommandButton.TabIndex = 3;
+            sendCommandButton.Text = "Send command";
+            sendCommandButton.UseVisualStyleBackColor = true;
+            sendCommandButton.Click += SendCommandButtonOnClick;
             // 
             // button3
             // 
@@ -166,7 +167,7 @@
             ledTrackBar.Size = new Size(208, 45);
             ledTrackBar.TabIndex = 1;
             ledTrackBar.Value = 255;
-            ledTrackBar.Scroll += trackBar1_Scroll;
+            ledTrackBar.Scroll += LedTrackBarOnChanged;
             // 
             // ledStateCheckBox
             // 
@@ -199,7 +200,6 @@
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(portNotFoundLabel);
             groupBox4.Controls.Add(applyBoardConfigButton);
             groupBox4.Controls.Add(baudNumericUpDown);
             groupBox4.Controls.Add(label5);
@@ -207,20 +207,10 @@
             groupBox4.Controls.Add(label4);
             groupBox4.Location = new Point(12, 21);
             groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(260, 164);
+            groupBox4.Size = new Size(260, 145);
             groupBox4.TabIndex = 4;
             groupBox4.TabStop = false;
             groupBox4.Text = "Board configuration";
-            // 
-            // portNotFoundLabel
-            // 
-            portNotFoundLabel.AutoSize = true;
-            portNotFoundLabel.ForeColor = Color.Red;
-            portNotFoundLabel.Location = new Point(12, 139);
-            portNotFoundLabel.Name = "portNotFoundLabel";
-            portNotFoundLabel.Size = new Size(166, 15);
-            portNotFoundLabel.TabIndex = 5;
-            portNotFoundLabel.Text = "Port 'COM3' cannot be found!";
             // 
             // applyBoardConfigButton
             // 
@@ -230,7 +220,7 @@
             applyBoardConfigButton.TabIndex = 4;
             applyBoardConfigButton.Text = "Apply board config";
             applyBoardConfigButton.UseVisualStyleBackColor = true;
-            applyBoardConfigButton.Click += applyBoardConfigButton_Click;
+            applyBoardConfigButton.Click += ApplyBoardConfigButtonOnClick;
             // 
             // baudNumericUpDown
             // 
@@ -265,6 +255,11 @@
             label4.Size = new Size(32, 15);
             label4.TabIndex = 0;
             label4.Text = "Port:";
+            // 
+            // notifyIcon1
+            // 
+            notifyIcon1.Text = "notifyIcon1";
+            notifyIcon1.Visible = true;
             // 
             // Form1
             // 
@@ -302,7 +297,7 @@
         private Label ledValueLabel;
         private Label label2;
         private Label label3;
-        private Button button2;
+        private Button sendCommandButton;
         private Button button3;
         private Button button1;
         private GroupBox groupBox3;
@@ -312,6 +307,6 @@
         private TextBox portBox;
         private Label label4;
         private Button applyBoardConfigButton;
-        private Label portNotFoundLabel;
+        private NotifyIcon notifyIcon1;
     }
 }
