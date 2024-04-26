@@ -134,7 +134,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(227, 89);
+            label2.Location = new Point(227, 80);
             label2.Name = "label2";
             label2.Size = new Size(25, 15);
             label2.TabIndex = 3;
@@ -143,7 +143,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(4, 89);
+            label1.Location = new Point(6, 80);
             label1.Name = "label1";
             label1.Size = new Size(13, 15);
             label1.TabIndex = 2;
@@ -171,7 +171,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(6, 31);
+            button1.Location = new Point(6, 22);
             button1.Name = "button1";
             button1.Size = new Size(111, 23);
             button1.TabIndex = 2;
@@ -183,7 +183,7 @@
             groupBox3.Controls.Add(button1);
             groupBox3.Location = new Point(12, 294);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(144, 73);
+            groupBox3.Size = new Size(260, 61);
             groupBox3.TabIndex = 3;
             groupBox3.TabStop = false;
             groupBox3.Text = "General";
@@ -192,7 +192,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(302, 379);
+            ClientSize = new Size(302, 370);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);

@@ -405,3 +405,8 @@ FodyWeavers.xsd
 /obj/Debug/net8.0-windows/LavoroFinaleM155.pdb
 /obj/Debug/net8.0-windows/LavoroFinaleM155.sourcelink.json
 /obj/Debug/net8.0-windows/ref/LavoroFinaleM155.dll
+/.idea/.idea.LavoroFinaleM155/.idea/copilot/chatSessions/00000000000.xd
+*.lck
+*.xml
+/obj/rider.project.model.nuget.info
+/obj/rider.project.restore.info
