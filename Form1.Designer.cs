@@ -230,6 +230,7 @@
             baudNumericUpDown.Name = "baudNumericUpDown";
             baudNumericUpDown.Size = new Size(183, 23);
             baudNumericUpDown.TabIndex = 3;
+            baudNumericUpDown.Value = new decimal(new int[] { 9600, 0, 0, 0 });
             // 
             // label5
             // 
@@ -244,6 +245,7 @@
             // 
             portBox.Location = new Point(42, 22);
             portBox.Name = "portBox";
+            portBox.PlaceholderText = "COM3";
             portBox.Size = new Size(183, 23);
             portBox.TabIndex = 1;
             // 

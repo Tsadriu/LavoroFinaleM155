@@ -48,7 +48,7 @@ namespace LavoroFinaleM155
         {
             try
             {
-                if (string.IsNullOrEmpty(portBox.Text) && baudNumericUpDown.Value <= 0)
+                if (string.IsNullOrEmpty(portBox.Text) || baudNumericUpDown.Value <= 0)
                 {
                     _serialPort.PortName = "COM3";
                     _serialPort.BaudRate = 9600;
