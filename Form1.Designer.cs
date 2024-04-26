@@ -62,7 +62,7 @@
             // 
             groupBox1.Controls.Add(ledLabel);
             groupBox1.Controls.Add(ledComboBox);
-            groupBox1.Location = new Point(12, 202);
+            groupBox1.Location = new Point(11, 172);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(260, 58);
             groupBox1.TabIndex = 0;
@@ -97,7 +97,7 @@
             groupBox2.Controls.Add(label1);
             groupBox2.Controls.Add(ledTrackBar);
             groupBox2.Controls.Add(ledStateCheckBox);
-            groupBox2.Location = new Point(12, 279);
+            groupBox2.Location = new Point(12, 236);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(260, 184);
             groupBox2.TabIndex = 1;
@@ -191,7 +191,7 @@
             // groupBox3
             // 
             groupBox3.Controls.Add(button1);
-            groupBox3.Location = new Point(12, 469);
+            groupBox3.Location = new Point(11, 426);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(260, 61);
             groupBox3.TabIndex = 3;
@@ -265,7 +265,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(283, 551);
+            ClientSize = new Size(283, 503);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
